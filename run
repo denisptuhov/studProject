@@ -1,6 +1,4 @@
 docker build . -t studproject
 docker run --name studproject -id studproject
-docker exec studproject gcc /app/p1/main.cpp -o /app/a1.out -lstdc++ -lrt 
-docker exec studproject gcc /app/p2/main.cpp -o /app/a2.out -lstdc++ -lrt
 docker exec studproject /bin/sh -c "/app/a1.out | /app/a2.out"
 docker rm -f studproject
